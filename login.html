@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>COMMUFI Login</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <script src="js/md5.js"></script>
+<style type="text/css">
+  td{
+    color:white;
+  }
+
+</style>
+</head>
+<body style="background-image: url('images/background1.png')">    
+  <nav style="background-color: rgb(52, 73, 94)" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="images/logo-hs.png" style="witdth:45px;height:55px;margin-top:6px"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- surely managing login -->
+
+  $(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-status)" />
+    <input type="hidden" name="popup" value="false" />
+  </form>
+  
+  <script type="text/javascript" src="/md5.js"></script>
+  <script type="text/javascript">
+  <!--
+      function doLogin() {
+    document.sendin.username.value = document.login.username.value;
+    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+    document.sendin.submit();
+    return false;
+      }
+  //-->
+  </script>
+  $(endif)
+  <!-- end of managing login -->
+  <div class="container" style="width: 80%;margin-top: -5%">
+    <br><br>
+
+    <div class="section">
+
+          <div class="col s12 m4">
+            <div class="card">
+            <center><h4>CommuFi Login</h4></center>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">
+             <!--Login section -->     
+  <form class="form-signin " name="login" action="$(link-login-only)" method="post"
+  $(if chap-id) onSubmit="return doLogin()" $(endif)>
+  <input type="hidden" name="dst" value="$(link-status)" />
+  <input type="hidden" name="popup" value="false" />
+        <center>    
+          <input style="width: 80%" name="username" type="text" value="$(username)" class="form-control" placeholder="Username"><br>
+          <input style="width: 80%" type="password" name="password" class="form-control" placeholder="Password">
+        </center>
+        <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+           <center><button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-user"></i> Sign In</button></center>
+        </form>
+ </form>
+
+  <!--end of login -->
+                </span>
+              </div>
+            </div>
+          </div>
+    </div>
+       <div class="container">
+             <center><h5 class="green-text">Tarrifs</h5></center>
+      <div class="row">
+          <div class="col s12 m12">
+                <table>
+                  <thead>
+                  <td>bandwidth</td>
+                  <td>Cost</td>
+                  <td>Duration</td>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>128kbps</td>
+                    <td>500frs</td>
+                    <td>24Hours</td>
+                  </tr>
+
+                  <tr>
+                    <td>128kbps</td>
+                    <td>1000frs</td>
+                    <td>1 week</td>
+                  </tr>
+
+                  <tr>
+                    <td>256kbps</td>
+                    <td>2000frs</td>
+                    <td>1 week</td>
+                  </tr>
+
+                  <tr>
+                    <td>128kbps</td>
+                    <td>2500frs</td>
+                    <td>1 week</td>
+                  </tr>
+
+                  <tr>
+                    <td>300kbps</td>
+                    <td>5000frs</td>
+                    <td>1 Month</td>
+                  </tr>
+
+                  <tr>
+                    <td>512kbps</td>
+                    <td>10 000frs</td>
+                    <td>1 Month</td>
+                  </tr>
+
+                  <tr>
+                    <td>1Mbps</td>
+                    <td>15000frs</td>
+                    <td>1 Month</td>
+                  </tr>
+                    
+                  </tbody>
+                </table>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="page-footer" style="background-color: white">
+    <div class="footer-copyright">
+      <div class="container" style="color:black">
+           <!-- <p style="float:right">Powered by <a href="skylabase.com">Skylabase.com</a></p> -->
+      <center>
+      &copy; Copyright 2016.
+      </center>
+      </div>
+            <img style="width: 23px;height:50px" src="images/skylabase.png" style="float:right">
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>COMMUFI Login</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <script src="js/md5.js"></script>
+
+    <script language="JavaScript">
+<!--
+    function openLogin() {
+  if (window.name != 'hotspot_logout') return true;
+  open('$(link-login)', '_blank', '');
+  window.close();
+  return false;
+    }
+//-->
+</script>
+</head>
+<body style="background-image: url('images/background1.png')">    
+  <nav style="background-color: rgb(52, 73, 94)" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="images/logo-hs.png" style="witdth:45px;height:55px;margin-top:6px"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="container" style="width: 80%;margin-top: -5%">
+    <br><br>
+
+    <div class="section">
+
+          <div class="col s12 m4">
+            <div class="card">
+            <center><h4>CommuFi Logout</h4></center>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">
+             <!--Logout section -->  
+  
+              <table width="100%" height="100%">
+                  <tr>
+                  <td align="center" valign="middle">
+                  <b>You have just logged out</b> <br><br>
+                  <table class="tabula" border="1">  
+                  <tr><td align="right">user name</td><td>$(username)</td></tr>
+                  <tr><td align="right">IP address</td><td>$(ip)</td></tr>
+                  <tr><td align="right">MAC address</td><td>$(mac)</td></tr>
+                  <tr><td align="right">session time</td><td>$(uptime)</td></tr>
+                  $(if session-time-left)
+                  <tr><td align="right">time left</td><td>$(session-time-left)</td></tr>
+                  $(endif)
+                  <tr><td align="right">bytes up/down:</td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+             </table>
+                  <br>
+
+              <form action="$(link-login)" name="login" onSubmit="return openLogin()">
+             <button type="submit" class="btn btn-lg btn-primary"><i class="fa fa-user"></i>Sign In</button>
+             </form>
+  <!--end of logout -->
+                </span>
+              </div>
+            </div>
+          </div>
+    </div>
+    </div>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script type="text/javascript">
+<!--
+  document.login.username.focus();
+//-->
+</script>
+
+  </body>
+</html>

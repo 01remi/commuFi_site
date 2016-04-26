@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>COMMUFI Login</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <script src="js/md5.js"></script>
+
+</head>
+<body style="background-image: url('images/background1.png')">    
+  <nav style="background-color: rgb(52, 73, 94)" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="images/logo-hs.png" style="witdth:45px;height:55px;margin-top:6px"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <!-- surely managing login -->
+
+  $(if chap-id)
+  <form name="sendin" action="$(link-login-only)" method="post">
+    <input type="hidden" name="username" />
+    <input type="hidden" name="password" />
+    <input type="hidden" name="dst" value="$(link-status)" />
+    <input type="hidden" name="popup" value="false" />
+  </form>
+  
+  <script type="text/javascript" src="/md5.js"></script>
+  <script type="text/javascript">
+  <!--
+      function doLogin() {
+    document.sendin.username.value = document.login.username.value;
+    document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+    document.sendin.submit();
+    return false;
+      }
+  //-->
+  </script>
+  $(endif)
+  
+
+  <div class="container">
+      <main><div class="container section">
+
+  <br>
+
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator"  style="height: 200px" src="images/a.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">obia remmy <br/> Skylabase<br/>tel:672072724</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/a.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Achia Rolence <br/>Ndongo<br/>tel:670030932</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="images/a.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Pablo<br/> JM,Zapeen <br/>tel:</span>
+              </div>
+            </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" style="height: 200px" src="images/a.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Paul <br/>Geneva<br/>tel:651288977</span>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator"  style="height: 200px" src="images/a.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Bill <br/> skylabase<br/>tel:678330964</span>
+              </div>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col s12 m4">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" style="height: 200px" src="images/a.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Yannick <br/>skylabase <br/>tel:681922919</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+    </main> 
+    <br><br>
+  </div>
+
+  <footer class="page-footer" style="background-color: rgb(52, 73, 94)">
+    <div class="footer-copyright">
+      <div class="container">
+      <center>
+      &copy; Copyright 2016.
+      </center>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

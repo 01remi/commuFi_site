@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="refresh" content="2; url=$(link-redirect)">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>COMMUFI Login</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <script src="js/md5.js"></script>
+
+</head>
+<body>    
+  <nav style="background-color: rgb(52, 73, 94)" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">COMMUFI</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="http://cummify.base/login">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li>
+        <form class="form-signin " name="login" action="$(link-login-only)" method="post"
+  $(if chap-id) onSubmit="return doLogin()" $(endif)>
+        <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Free Trial</a>
+        </form>
+        </li>
+        <li><a href="vision.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="http://cummify.base/login">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li>
+        <form class="form-signin " name="login" action="$(link-login-only)" method="post"
+  $(if chap-id) onSubmit="return doLogin()" $(endif)>
+        <a href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">Free Trial</a>
+        </form>
+        </li>
+        <li><a href="vision.html">Mission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="container" style="width: 90%;margin-top: -5%">
+    <br><br>
+
+    <div class="section">
+       <div class="col s4 m4">
+            <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header active"><i class="material-icons">perm_identity</i> <center>CommuFi Login</center></div>
+            <div class="collapsible-body">
+            <center>
+                <table width="100%" height="100%">
+                      <tr>
+                        <td align="center" valign="middle">
+                        You are logged in
+                        <br><br>
+                        If nothing happens, click <a href="$(link-redirect)">here</a></td>
+                      </tr>
+                 </table>
+             </center>    
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">language</i> Breathe Digital Power</div>
+          </li>
+          </ul>
+        </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer" style="background-color: rgb(52, 73, 94)">
+    <div class="footer-copyright">
+      <div class="container">
+      <center>
+      &copy; Copyright 2016.
+      </center>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>COMMUFI $(uptime) / $(session-time-left) &gt; status</title>
+  $(if refresh-timeout)
+  <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+  $(endif)
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="expires" content="-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>COMMUFI Login</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <script src="js/md5.js"></script>
+
+<style type="text/css">
+  td{
+    color:white;
+  }
+
+</style>
+
+<script language="JavaScript">
+<!--
+$(if advert-pending == 'yes')
+    var popup = '';
+    function focusAdvert() {
+    if (window.focus) popup.focus();
+    }
+  
+    function openAdvert() {
+    popup = open('$(link-advert)', 'hotspot_advert', '');
+    setTimeout("focusAdvert()", 1000);
+    }
+$(endif)
+    function openLogout() {
+    if (window.name != 'hotspot_status') return true;
+      open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+    window.close();
+    return false;
+    }
+//-->
+</script>
+</head>
+<body $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif) style="background-image: url('images/background1.png')">    
+  <nav style="background-color: rgb(52, 73, 94)" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"><img src="images/logo-hs.png" style="witdth:45px;height:55px;margin-top:6px"></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="login.html">Home</a></li>
+        <li><a href="http://commufi.link/radiusmanager/user">Signup</a></li>
+        <li><a href="vision.html">Vision</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="container" style="width: 90%;margin-top: -5%">
+    <br><br>
+
+    <div class="section">
+       <div class="col s4 m4">
+            <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header active"><i class="material-icons">perm_identity</i> <center>CommuFi Status</center></div>
+            <div class="collapsible-body">
+            <center>
+                  <form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+  <table cellspacing="0" class="status" style="font-size:12px">
+  <tr><td align="left" class="col s3 m3" style="font-size:14px"><strong>
+$(if login-by == 'trial')
+    Welcome trial user!
+$(elif login-by != 'mac')
+    Welcome $(username)!
+$(endif)
+<div><img src="images/Logo.png" style="width:60px;height:60px">
+    </strong></td></tr>
+  <tr><td class="col s3 m3" style="text-align: center;"></td></tr>
+    <tr><td class="col s3 m3">&nbsp;</td></tr>
+  <tr><td><strong>IP address</strong></td><td>$(ip)</td></tr>
+  <tr><td><strong>bytes up/down</strong></td><td>$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+$(if session-time-left)
+  <tr><td><strong>connected / left</strong></td><td>$(uptime) / $(session-time-left)</td></tr>
+$(else)
+  <tr><td><strong>connected</strong></td><td>$(uptime)</td></tr>
+$(endif)
+$(if blocked == 'yes')
+  <tr><td><strong>status</strong></td>
+    <td><div style="color: #FF8080">
+      <a href="$(link-advert)" target="hotspot_advert">advertisement</a> required
+    </div></td></tr>
+$(elif refresh-timeout)
+  <tr><td><strong>status refresh</strong></td><td>$(refresh-timeout)</td></tr>
+$(endif)
+    <tr><td class="col s3 m3">&nbsp;</td></tr>
+    <tr>
+      <td class="col s3 m3">
+$(if login-by-mac != 'yes')
+        <!-- user manager link
+        <button onclick="document.location='http://$(hostname)/user?subs='">status</button>
+        <!-- end of user manager link -->
+        <center><button type="submit" value="log off" class="btn btn-lg btn-primary"><i class="fa fa-user"></i> Log off</button></center>
+      <!--  <input  type="submit" value="log off"> -->
+$(endif)
+      </td>
+    </tr>
+  
+  </table>
+  </form>
+             </center>    
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons">language</i> Breathe Digital Power</div>
+          </li>
+          </ul>
+        </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer" style="background-color: rgb(52, 73, 94)">
+    <div class="footer-copyright">
+      <div class="container">
+      <center>
+      &copy; Copyright 2016.
+      </center>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
